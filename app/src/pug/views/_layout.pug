@@ -1,14 +1,13 @@
-include ../mixins/_svgsprite
+include ../mixins/_svgsprite.pug
 
 doctype html
 html(lang="en")
 	block vars
 	head
 		block title
-			title #{pageTitle} - My Static Site
+			title #{pageTitle} #{bodyClass} - My Static Site oioiOIOOI #{bodyClass}
 		link(rel='stylesheet', href='assets/css/screen.css')
-	body(class='#{bodyClass}')
-		
+	body(class='#{pageTitle}')
 		block content
 
 		script(src='assets/js/script.js')
